@@ -4,7 +4,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Status;
-use Illuminate\Http\Request;
 
 
 class HomeController extends Controller
@@ -69,6 +68,18 @@ class HomeController extends Controller
     public function show(Status $status)
     {
         return view('/home',compact('status'));
+    }
+
+
+
+    public function updatemahapolaname($id){
+
+//        Status::findOrFail(1)->update($request->all());
+
+
+//        Status::->update(['mahalpola_name'=>'test']);
+
+//        return back();
     }
 
 }
