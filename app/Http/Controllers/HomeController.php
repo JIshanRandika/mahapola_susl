@@ -3,7 +3,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Status;
 use Illuminate\Http\Request;
 
 
@@ -27,7 +27,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $status = Status::all();
+
+        return view('home',compact('status'));
     }
 
 
@@ -62,4 +64,11 @@ class HomeController extends Controller
     {
         dd('Access only Superadmin');
     }
+
+
+    public function show(Status $status)
+    {
+        return view('/home',compact('status'));
+    }
+
 }

@@ -20,11 +20,21 @@
 {{--                            <button>Finance Division Clerk</button>--}}
 {{--                            <button>Student</button>--}}
                             <h1>See Status</h1>
+
+                        @foreach($status as $s)
+                                <strong>Installment:</strong>
+                                {{ $s->mahalpola_name }}
+                            <h1></h1>
+                                <strong>Status:</strong>
+                                {{ $s->status }}
+                            @endforeach
                         @endif
 
 
                         @if(checkPermission(['assistant_registrar_of_the_faculty']))
+
                                 <h1>Edit access for assistant registrar</h1>
+
                             @endif
 
 
