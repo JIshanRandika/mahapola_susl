@@ -25,6 +25,13 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::post('/home/updatemahapolaname', [App\Http\Controllers\HomeController::class, 'updatemahapolaname'])->name('updatemahapolaname');
+
+
+Route::resource('statuses', \App\Http\Controllers\StatusController::class);
+//Route::resource('updateToLevelOneController', \App\Http\Controllers\updateToLevelOneController::class);
+
+
 Route::group(['middleware'=>'auth'], function () {
     Route::get('permissions-all-users',['middleware'=>'check-permission:user|admin|superadmin','uses'=>'HomeController@allUsers']);
     Route::get('permissions-admin-superadmin',['middleware'=>'check-permission:admin|superadmin','uses'=>'HomeController@adminSuperadmin']);
