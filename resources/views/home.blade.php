@@ -12,19 +12,25 @@
                     <div class="panel-body">
 
 
-                        @if(checkPermission(['user','admin','superadmin']))
-                            <a href="{{ url('permissions-all-users') }}"><button>Access All Users</button></a>
+                        @if(checkPermission(['vice_chancellor','registrar','assistant_registrar_of_the_faculty','student_affairs_division_clerk','finance_division_clerk','student']))
+{{--                            <button>Vice Chancellor</button>--}}
+{{--                            <button>Registrar</button>--}}
+{{--                            <button>Assistant Registrar Of The Faculty</button>--}}
+{{--                            <button>Student Affairs Division Clerk</button>--}}
+{{--                            <button>Finance Division Clerk</button>--}}
+{{--                            <button>Student</button>--}}
+                            <h1>See Status</h1>
                         @endif
 
 
-                        @if(checkPermission(['admin','superadmin']))
-                            <a href="{{ url('permissions-admin-superadmin') }}"><button>Access Admin and Superadmin</button></a>
-                        @endif
+                        @if(checkPermission(['assistant_registrar_of_the_faculty']))
+                                <h1>Edit access for assistant registrar</h1>
+                            @endif
 
 
-                        @if(checkPermission(['superadmin']))
-                            <a href="{{ url('permissions-superadmin') }}"><button>Access Only Superadmin</button></a>
-                        @endif
+                        @if(checkPermission(['student_affairs_division_clerk']))
+                                <h1>Edit access for student affairs division</h1>
+                            @endif
 
 
                     </div>
