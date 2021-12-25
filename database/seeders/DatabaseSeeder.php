@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 use App\Models\User;
+use App\Models\Status;
 
 use Illuminate\Database\Seeder;
 
@@ -54,8 +55,21 @@ class DatabaseSeeder extends Seeder
             ],
         ];
 
+
+        $status = [
+            [
+                'mahalpola_name' => 'Expect the next installment soon',
+                'status' => 'Not in progress',
+                'level' => '0'
+            ]
+        ];
+
         foreach ($user as $key => $value) {
             User::create($value);
+        }
+
+        foreach ($status as $key => $value) {
+            Status::create($value);
         }
     }
 }
