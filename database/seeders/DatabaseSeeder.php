@@ -17,20 +17,38 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $user = [
             [
-                'name'=>'Admin',
-                'email'=>'admin@gmail.com',
+                'name'=>'Vice Chancellor',
+                'email'=>'vc@gmail.com',
                 'is_permission'=>'1',
                 'password'=> bcrypt('123456'),
             ],
             [
-                'name'=>'SuperAdmin',
-                'email'=>'superadmin@gmail.com',
+                'name'=>'Registrar',
+                'email'=>'reg@gmail.com',
                 'is_permission'=>'2',
                 'password'=> bcrypt('123456'),
             ],
             [
-                'name'=>'User',
-                'email'=>'user@gmail.com',
+                'name'=>'Assistant Registrar Of The Faculty',
+                'email'=>'ar@gmail.com',
+                'is_permission'=>'3',
+                'password'=> bcrypt('123456'),
+            ],
+            [
+                'name'=>'Student Affairs Division Clerk',
+                'email'=>'stdaff@gmail.com',
+                'is_permission'=>'4',
+                'password'=> bcrypt('123456'),
+            ],
+            [
+                'name'=>'Finance Division Clerk',
+                'email'=>'fin@gmail.com',
+                'is_permission'=>'5',
+                'password'=> bcrypt('123456'),
+            ],
+            [
+                'name'=>'Student',
+                'email'=>'std@gmail.com',
                 'is_permission'=>'0',
                 'password'=> bcrypt('123456'),
             ],
