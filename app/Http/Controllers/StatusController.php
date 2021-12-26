@@ -142,13 +142,6 @@ class StatusController extends Controller
         }
 
 
-//        else{
-//            $status->update(
-//                ['mahalpola_name' => 'Expect the next installment soon',
-//                    'status' => 'Not in progress',
-//                    'level' => '0']
-//            );
-//        }
         return back()->with('success','System updated successfully');
 
 

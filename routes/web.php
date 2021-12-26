@@ -29,7 +29,6 @@ Route::post('/home/updatemahapolaname', [App\Http\Controllers\HomeController::cl
 
 
 Route::resource('statuses', \App\Http\Controllers\StatusController::class);
-//Route::resource('updateToLevelOneController', \App\Http\Controllers\updateToLevelOneController::class);
 
 
 Route::group(['middleware'=>'auth'], function () {

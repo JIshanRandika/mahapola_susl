@@ -6,7 +6,6 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-{{--                    <div class="panel-heading">Manage Permission</div>--}}
 
 
                     <div class="panel-body">
@@ -17,20 +16,8 @@
                         @endif
 
                         @if(checkPermission(['vice_chancellor','registrar','finance_division_clerk','student']))
-{{--                            <button>Vice Chancellor</button>--}}
-{{--                            <button>Registrar</button>--}}
-{{--                            <button>Assistant Registrar Of The Faculty</button>--}}
-{{--                            <button>Student Affairs Division Clerk</button>--}}
-{{--                            <button>Finance Division Clerk</button>--}}
-{{--                            <button>Student</button>--}}
-{{--                            <h1>See Status</h1>--}}
 
                         @foreach($status as $s)
-{{--                                <strong>Installment:</strong>--}}
-{{--                                {{ $s->mahalpola_name }}--}}
-{{--                            <h1></h1>--}}
-{{--                                <strong>Status:</strong>--}}
-{{--                                {{ $s->status }}--}}
 
                                 @if($s->level!=='0')
                                     <div class="card text-center m-5">
@@ -93,13 +80,6 @@
                                         </div>
 
                                     @endif
-{{--                                    <strong>Installment:</strong>--}}
-{{--                                    {{ $s->mahalpola_name }}--}}
-{{--                                    <h1></h1>--}}
-{{--                                    <strong>Status:</strong>--}}
-{{--                                    {{ $s->status }}--}}
-
-
 
 
                                 @endforeach
@@ -108,15 +88,6 @@
 
 
                         @if(checkPermission(['student_affairs_division_clerk']))
-{{--                                <div class="row">--}}
-{{--                                    <div class="col-lg-12 margin-tb">--}}
-{{--                                        <div class="pull-left">--}}
-{{--                                        </div>--}}
-{{--                                        <div class="pull-right">--}}
-{{--                                            <a class="btn btn-success" href="{{ route('statuses.create') }}">Create New Process</a>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
 
                                 <div class="row">
                                     <div class="col-lg-12 margin-tb">
@@ -171,18 +142,6 @@
                                                 <input type="text" name="mahalpola_description" class="form-control" placeholder="Installment Description">
                                             </div>
                                         </div>
-{{--                                        <div class="col-xs-12 col-sm-12 col-md-12">--}}
-{{--                                            <div class="form-group">--}}
-{{--                                                <strong>Status:</strong>--}}
-{{--                                                <input type="text" name="status" class="form-control" placeholder="S">--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="col-xs-12 col-sm-12 col-md-12">--}}
-{{--                                            <div class="form-group">--}}
-{{--                                                <strong>Level:</strong>--}}
-{{--                                                <input type="text" name="level" class="form-control" placeholder="level">--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
 
 
                                         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
@@ -192,19 +151,7 @@
 
                                 </form>
 
-{{--                                <form action="{{ route('statuses.update',1) }}" method="POST">--}}
-{{--                                    @csrf--}}
-{{--                                    @method('PUT')--}}
 
-{{--                                    <div class="row">--}}
-
-{{--                                        <div class="col-xs-12 col-sm-12 col-md-12 text-center">--}}
-{{--                                            <button type="submit" class="btn btn-primary">Start New Progress</button>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-
-{{--                                </form>--}}
-{{--                                <h1>See Status</h1>--}}
 
                                 @foreach($status as $s)
 
@@ -276,27 +223,6 @@
                                             </div>
                                         </div>
 
-
-                                        {{--                                    <strong>Installment:</strong>--}}
-{{--                                    {{ $s->mahalpola_name }}--}}
-{{--                                    <h1></h1>--}}
-{{--                                    <strong>Status:</strong>--}}
-{{--                                    {{ $s->status }}--}}
-
-{{--                                    @if($s->level=='0')--}}
-{{--                                        <form action="{{ route('statuses.update',1) }}" method="POST">--}}
-{{--                                            @csrf--}}
-{{--                                            @method('PUT')--}}
-
-{{--                                            <div class="row">--}}
-
-{{--                                                <div class="col-xs-12 col-sm-12 col-md-12 text-center">--}}
-{{--                                                    <button type="submit" class="btn btn-primary">Start New Progress</button>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-
-{{--                                        </form>--}}
-{{--                                    @endif--}}
 
 
                                     @endif
