@@ -10,7 +10,11 @@ class Status extends Model
     use HasFactory;
 
     protected $fillable = [
-        'mahalpola_name',
+        'batch',
+        'faculty',
+        'mahapola_year',
+        'mahapola_month',
+        'mahalpola_description',
         'status',
         'level',
     ];
