@@ -36,6 +36,8 @@ class StatusController extends Controller
     public function store(Request $request)
     {
         //
+        Status::create($request->all());
+        return back()->with('success','New Process added successfully');
     }
 
     /**
@@ -70,9 +72,15 @@ class StatusController extends Controller
     public function update(Request $request, Status $status)
     {
 
-//        $flight = Status::where('legs', '>', 3)->firstOrFail();
+        $test = $status->id;
 
-        $value=Status::query()->find(1,'level');
+
+        $value=Status::query()->find((int)$status->id,'level');
+
+//        echo 'a';
+
+        print $test;
+
 
 
         $levelzero= '{"level":"0"}';
@@ -81,9 +89,9 @@ class StatusController extends Controller
         $levelthree = '{"level":"3"}';
         $levelfour = '{"level":"4"}';
 
-        if($value==$levelone){
-            print $value;
-        }
+//        if($value==$levelone){
+//            print $value;
+//        }
 
 
 
@@ -91,43 +99,46 @@ class StatusController extends Controller
 
         if($value==$levelzero){
             $status->update(
-                ['mahalpola_name'=>'Next installment is in progress',
+                [
                     'status'=>'Verifying list by Student Affairs Division before send to the Assistant Registrar',
                     'level'=>'1']
             );
+            return back()->with('success','System updated successfully');
 
         }
         if($value==$levelone){
             $status->update(
-                ['mahalpola_name'=>'Next installment is in progress',
+                [
                     'status'=>'Verifyied by the Student Affairs Division and Moved to the Assistant Registrar of the Faculty',
                     'level'=>'2']
             );
+            return back()->with('success','System updated successfully');
+
         }
         if ($value==$leveltwo) {
             $status->update(
-                ['mahalpola_name' => 'Next installment is in progress',
+                [
                     'status' => 'Assistant Registrar of the Faculty send the Finalized List to Studenet Affirs Division',
                     'level' => '3']
             );
-            return back();
+            return back()->with('success','System updated successfully');
         }
         if ($value==$levelthree) {
             $status->update(
-                ['mahalpola_name' => 'Next installment is in progress',
+                [
                     'status' => 'Send the Finalized List to the UGC by the Student Affirs Division',
                     'level' => '4']
             );
-            return back();
+            return back()->with('success','System updated successfully');
         }
 
         if ($value==$levelfour) {
             $status->update(
-                ['mahalpola_name' => 'Expect the next installment soon',
-                    'status' => 'Not in progress',
+                [
+                    'status' => 'Process Finished',
                     'level' => '0']
             );
-            return back();
+            return back()->with('success','System updated successfully');
         }
 
 
@@ -138,7 +149,7 @@ class StatusController extends Controller
 //                    'level' => '0']
 //            );
 //        }
-        return back();
+        return back()->with('success','System updated successfully');
 
 
 
