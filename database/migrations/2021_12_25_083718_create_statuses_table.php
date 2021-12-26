@@ -15,9 +15,13 @@ class CreateStatusesTable extends Migration
     {
         Schema::create('statuses', function (Blueprint $table) {
             $table->id();
-            $table->string('mahalpola_name');
-            $table->text('status');
-            $table->string('level');
+            $table->string('batch');
+            $table->string('faculty');
+            $table->string('mahapola_year');
+            $table->string('mahapola_month');
+            $table->string('mahalpola_description');
+            $table->String('status')->default('New installment process assigned');
+            $table->string('level')->default('1');
             $table->timestamps();
         });
     }
