@@ -29,6 +29,8 @@ Route::post('/home/updatemahapolaname', [App\Http\Controllers\HomeController::cl
 
 
 Route::resource('statuses', \App\Http\Controllers\StatusController::class);
+Route::resource('arcomments', \App\Http\Controllers\ArcommentController::class);
+
 
 
 Route::group(['middleware'=>'auth'], function () {

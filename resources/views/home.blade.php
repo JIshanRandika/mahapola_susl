@@ -55,6 +55,27 @@
 
 
                                                 @if($s->level=='2')
+
+                                                    <form action="{{ route('arcomments.store') }}" method="POST">
+                                                        @csrf
+
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                                                <div class="form-group">
+                                                                    <strong>Comment:</strong>
+                                                                    <input type="text" name="ar_comment" class="form-control" placeholder="Comment">
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-xs-12 col-sm-12 col-md-12 text-center m-1">
+                                                                <button name="status_id" value="{{$s->id}}" type="submit" class="btn btn-info">Add Comment</button>
+                                                            </div>
+                                                        </div>
+
+                                                    </form>
+
+
                                                     <form action="{{ route('statuses.update',$s->id) }}" method="POST">
                                                         @csrf
                                                         @method('PUT')
