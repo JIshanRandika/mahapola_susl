@@ -3,6 +3,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\arcomment;
 use App\Models\Status;
 
 
@@ -26,9 +27,13 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $arcomment = arcomment::all();
+
+//        return view('home',compact('arcomment'));
+
         $status = Status::all();
 
-        return view('home',compact('status'));
+        return view('home',compact('status','arcomment'));
     }
 
 

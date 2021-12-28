@@ -178,6 +178,9 @@
 
 
                                     @if($s->level!=='0')
+
+
+
                                         <div class="card text-center m-5">
                                             <div class="card-header">
                                                 Installment for: {{ $s->mahapola_year }} {{ $s->mahapola_month }}
@@ -186,6 +189,13 @@
                                                 <h5 class="card-title">{{ $s->faculty }} {{ $s->batch }}</h5>
                                                 <h6 class="card-text">{{ $s->status }}</h6>
                                                 <p class="card-text">{{ $s->mahalpola_description }}</p>
+
+                                                <h6 class="card-text">Comments by Assistant Registrar:</h6>
+                                                @foreach($arcomment as $arc)
+                                                    @if($s->id==$arc->status_id)
+                                                        <p>{{$arc->ar_comment}}</p>
+                                                    @endif
+                                                @endforeach
 
                                                 @if($s->level=='1')
                                                     <form action="{{ route('statuses.update',$s->id) }}" method="POST">
