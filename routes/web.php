@@ -31,7 +31,7 @@ Route::post('/home/updatemahapolaname', [App\Http\Controllers\HomeController::cl
 Route::resource('statuses', \App\Http\Controllers\StatusController::class);
 Route::resource('arcomments', \App\Http\Controllers\ArcommentController::class);
 
-
+Route::get('/getPDF', [App\Http\Controllers\PDFController::class, 'download']);
 
 Route::group(['middleware'=>'auth'], function () {
     Route::get('permissions-all-users',['middleware'=>'check-permission:user|admin|superadmin','uses'=>'HomeController@allUsers']);
