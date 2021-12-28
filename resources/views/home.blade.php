@@ -29,6 +29,12 @@
                                             <h6 class="card-text">{{ $s->status }}</h6>
                                             <p class="card-text">{{ $s->mahalpola_description }}</p>
 
+                                            <h6 class="card-text">Comments by Assistant Registrar:</h6>
+                                            @foreach($arcomment as $arc)
+                                                @if($s->id==$arc->status_id)
+                                                    <p>{{$arc->ar_comment}}</p>
+                                                @endif
+                                            @endforeach
 
                                         </div>
                                         <div class="card-footer text-muted">
@@ -52,6 +58,7 @@
                                                 <h5 class="card-title">{{ $s->faculty }} {{ $s->batch }}</h5>
                                                 <h6 class="card-text">{{ $s->status }}</h6>
                                                 <p class="card-text">{{ $s->mahalpola_description }}</p>
+
 
 
                                                 @if($s->level=='2')
