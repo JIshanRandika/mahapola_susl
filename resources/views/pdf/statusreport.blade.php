@@ -9,6 +9,10 @@
 </head>
 <body>
     <h1>Ishan</h1>
+    @foreach($status as $s)
+        <p>{{$s->mahalpola_description}}</p>
+
+    @endforeach
 
 </body>
 </html>
