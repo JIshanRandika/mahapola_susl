@@ -30,9 +30,52 @@ class DatabaseSeeder extends Seeder
                 'password'=> bcrypt('123456'),
             ],
             [
-                'name'=>'Assistant Registrar Of The Faculty',
-                'email'=>'ar@gmail.com',
-                'is_permission'=>'3',
+                'name'=>'Assistant Registrar of The Faculty of Graduate Studies"',
+                'email'=>'graduatear@gmail.com',
+                'is_permission'=>'31',
+                'password'=> bcrypt('123456'),
+            ],
+
+            [
+                'name'=>'Assistant Registrar of The Faculty of Agriculture Science',
+                'email'=>'agriculturear@gmail.com',
+                'is_permission'=>'32',
+                'password'=> bcrypt('123456'),
+            ],
+            [
+                'name'=>'Assistant Registrar of The Faculty of Applied Sciences',
+                'email'=>'appliedar@gmail.com',
+                'is_permission'=>'33',
+                'password'=> bcrypt('123456'),
+            ],
+            [
+                'name'=>'Assistant Registrar of The Faculty of Geomatics',
+                'email'=>'geomaticsar@gmail.com',
+                'is_permission'=>'34',
+                'password'=> bcrypt('123456'),
+            ],
+            [
+                'name'=>'Assistant Registrar of The Faculty of Management Studies',
+                'email'=>'managementar@gmail.com',
+                'is_permission'=>'35',
+                'password'=> bcrypt('123456'),
+            ],
+            [
+                'name'=>'Assistant Registrar of The Faculty of Medicine',
+                'email'=>'medicinear@gmail.com',
+                'is_permission'=>'36',
+                'password'=> bcrypt('123456'),
+            ],
+            [
+                'name'=>'Assistant Registrar of The Faculty of Social Sciences & Languages',
+                'email'=>'socialar@gmail.com',
+                'is_permission'=>'37',
+                'password'=> bcrypt('123456'),
+            ],
+            [
+                'name'=>'Assistant Registrar of The Faculty of Technology',
+                'email'=>'technologyar@gmail.com',
+                'is_permission'=>'38',
                 'password'=> bcrypt('123456'),
             ],
             [
