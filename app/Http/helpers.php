@@ -19,10 +19,31 @@ function getMyPermission($id)
             return 'vice_chancellor';
             break;
         case 2:
-            return 'registrar';
-            break;
-        case 3:
             return 'assistant_registrar_of_the_faculty';
+            break;
+        case 31:
+            return 'graduate_studies_assistant_registrar';
+            break;
+        case 32:
+            return 'agriculture_science_assistant_registrar';
+            break;
+        case 33:
+            return 'applied_sciences_assistant_registrar';
+            break;
+        case 34:
+            return 'geomatics_assistant_registrar';
+            break;
+        case 35:
+            return 'management_studies_assistant_registrar';
+            break;
+        case 36:
+            return 'medicine_assistant_registrar';
+            break;
+        case 37:
+            return 'social_sciences_assistant_registrar';
+            break;
+        case 38:
+            return 'technology_assistant_registrar';
             break;
         case 4:
             return 'student_affairs_division_clerk';
