@@ -19,7 +19,7 @@ function getMyPermission($id)
             return 'vice_chancellor';
             break;
         case 2:
-            return 'assistant_registrar_of_the_faculty';
+            return 'registrar';
             break;
         case 31:
             return 'graduate_studies_assistant_registrar';
