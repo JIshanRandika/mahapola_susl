@@ -29,12 +29,14 @@
                                             <h6 class="card-text">{{ $s->status }}</h6>
                                             <p class="card-text">{{ $s->mahalpola_description }}</p>
 
-                                            <h6 class="card-text">Comments by Assistant Registrar:</h6>
-                                            @foreach($arcomment as $arc)
-                                                @if($s->id==$arc->status_id)
-                                                    <p>{{$arc->ar_comment}}</p>
-                                                @endif
-                                            @endforeach
+                                            @if($s->level!=='1')
+                                                <h6 class="card-text">Comments by Assistant Registrar:</h6>
+                                                @foreach($arcomment as $arc)
+                                                    @if($s->id==$arc->status_id)
+                                                        <p>{{$arc->ar_comment}}</p>
+                                                    @endif
+                                                @endforeach
+                                            @endif
 
                                         </div>
                                         <div class="card-footer text-muted">
@@ -714,12 +716,14 @@
                                             <h6 class="card-text">{{ $s->status }}</h6>
                                             <p class="card-text">{{ $s->mahalpola_description }}</p>
 
+                                            @if($s->level!=='1')
                                             <h6 class="card-text">Comments by Assistant Registrar:</h6>
                                             @foreach($arcomment as $arc)
                                                 @if($s->id==$arc->status_id)
                                                     <p>{{$arc->ar_comment}}</p>
                                                 @endif
                                             @endforeach
+                                            @endif
 
                                             @if($s->level=='1')
                                                 <form action="{{ route('statuses.update',$s->id) }}" method="POST">
