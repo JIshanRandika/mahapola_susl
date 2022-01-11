@@ -17,8 +17,7 @@ class CreateStatusesTable extends Migration
             $table->id();
             $table->string('batch');
             $table->string('faculty');
-            $table->string('mahapola_year');
-            $table->string('mahapola_month');
+            $table->string('installment_name');
             $table->string('mahalpola_description');
             $table->String('status')->default('New installment process assigned');
             $table->string('level')->default('1');
